@@ -11,13 +11,13 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let user of user">
-            <td scope="row">{{user.id}}</td>
-            <td>{{user.nombre}}</td>
-            <td>{{user.apellido}}</td>
-            <td>{{user.tlf}}</td>
-            <td>{{user.username}}</td>
-            <td>{{user.password}}</td>
+        <tr *ngFor="let us of user">
+            <td scope="row">{{us.id}}</td>
+            <td>{{us.nombre}}</td>
+            <td>{{us.apellido}}</td>
+            <td>{{us.tlf}}</td>
+            <td>{{us.username}}</td>
+            <td>{{us.password}}</td>
 
             <td><button (click)="Editar(user)">modificar</button></td>
             <td><button (click)="Eliminar(user)">eliminar</button></td>

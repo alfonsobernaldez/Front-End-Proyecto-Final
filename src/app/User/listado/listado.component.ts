@@ -15,10 +15,11 @@ export class ListadoComponent implements OnInit {
   constructor(private http: UserService, private router: Router) { }
 
   ngOnInit() {
-    this.http.getUser()
+    this.http.getUsersCompleto()
     .subscribe(datos => {this.user= datos;
-    })
+    });
   }
+
 Editar(user: User): void {
   localStorage.setItem( "id" , user.id.toString());
   this.router.navigate(["modificar"]);
@@ -32,7 +33,7 @@ Eliminar(user: User)
     this.router.navigate(["listado"]);
     });
 
-}
 
 
+  }
 }

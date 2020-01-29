@@ -9,7 +9,7 @@ export class MascotaService {
 
   path: string;
   constructor(private http: HttpClient) {
-    this.path = ' http://localhost:8080/users'
+    this.path = ' http://localhost:8080/mascotas'
    }
 
    getMascota()

@@ -6,13 +6,12 @@ import { User } from '../Modelos/User';
   providedIn: 'root'
 })
 export class UserService {
-
   path:string;
   constructor(private http:HttpClient) {
-    this.path='http://localhost:8080/users'
+    this.path= 'http://localhost:8080/users';
    }
 
-   getUser()
+   getUsersCompleto()
    {
      return this.http.get<User[]>(this.path);
    }

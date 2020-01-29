@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { UserService } from './services/user.service';
+import { User } from './Modelos/User';
 
 @Component({
   selector: 'app-root',
@@ -9,8 +11,13 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'Front-End-Proyecto-Final';
 
-  constructor(private router: Router) {}
-listado() {
+  user: User = {id:'',nombre:'',apellido:'',tlf:'' ,username:'',password:'' };
+
+listado = null;
+
+  constructor(private http: UserService, private router: Router, private us: UserService) { }
+
+  listadoUser() {
 
   this.router.navigate(['listado']);
 
@@ -25,5 +32,11 @@ tablaMascota() {
   this.router.navigate(['mascota']);
 
   }
+
+/*verListadoCompleto() {
+
+    this.us.getUsersCompleto().subscribe(listado => {this.listado = listado});
+
+}*/
 
 }
