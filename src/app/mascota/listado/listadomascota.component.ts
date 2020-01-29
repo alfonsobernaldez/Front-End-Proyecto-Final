@@ -10,7 +10,10 @@ import { Router } from '@angular/router';
 })
 export class ListadoMascotaComponent implements OnInit {
   mascota: Mascota[];
+
+
   constructor(private http: MascotaService, private router: Router) { }
+
   ngOnInit() {
     this.http.getMascota()
       .subscribe(datos => {
@@ -19,14 +22,14 @@ export class ListadoMascotaComponent implements OnInit {
   }
   Editar(mascota: Mascota): void {
     localStorage.setItem("id", mascota.id.toString());
-    this.router.navigate(["modificar"]);
+    this.router.navigate(["modificarm"]);
   }
   Eliminar(mascota: Mascota) {
     this.http.deleteMascota(mascota)
       .subscribe(datos => {
         this.mascota = this.mascota.filter(m => m != mascota);
         alert("eliminado");
-        this.router.navigate(["listado"]);
+        this.router.navigate(["mascota"]);
       });
   }
 }

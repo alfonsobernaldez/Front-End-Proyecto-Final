@@ -1,8 +1,27 @@
-<form action="">
-    <input type="text" id="nombre" name="nombre" [(ngModel)]="mascota.nombre">
-    <div *ngIf="nombre.errors.nombreUnico">
-        Ese nombre de usuario ya está en uso
-    </div>
-    {{mascota.id}} {{mascota.nombre}}
-    <button (click)="Actualizar(mascota)">Modificar</button>
-</form>
+<div>
+    <form #formulario="ngForm">
+
+        <label for="Nombre">Nombre</label>
+        <input type="Text" class="form-control" name="nombre" id="nombre" [(ngModel)]="mascota.nombre" #nombre="ngModel">
+
+
+        <div class="form-group">
+            <label for="especie">Especie</label>
+            <input type="Text" class="form-control" name="especie" id="especie" [(ngModel)]="mascota.especie">
+        </div>
+
+
+        <div class="form-group">
+            <label for="gastos">Gastos</label>
+            <input type="Text" class="form-control" id="gastos" name="gastos" [(ngModel)]="mascota.gastos">
+        </div>
+
+
+
+        <div class="guardar">
+            <!--POR QUE NO FUNCIONA!!!!-->
+
+            <button (click)="Actualizar(mascota)">Modificar</button>
+        </div>
+    </form>
+</div>

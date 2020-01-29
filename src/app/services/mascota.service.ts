@@ -7,7 +7,9 @@ import { HttpClient } from '@angular/common/http';
 })
 export class MascotaService {
 
+  mascota: Mascota;
   path: string;
+
   constructor(private http: HttpClient) {
     this.path = ' http://localhost:8080/mascotas'
    }

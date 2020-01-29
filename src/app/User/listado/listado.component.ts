@@ -16,7 +16,7 @@ export class ListadoComponent implements OnInit {
 
   ngOnInit() {
     this.http.getUsersCompleto()
-    .subscribe(datos => {this.user= datos;
+    .subscribe(datos => {this.user = datos;
     });
   }
 

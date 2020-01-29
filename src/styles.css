@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    background-image: no-repeat;
+    background-size: cover;
+    background-color: aliceblue;
+}
+
+div {
+    float: top;
+}
+
+input {
+    width: 80%;
+    margin-left: 3rem;
+    margin-right: 10%;
+}
+
+label {
+    margin-top: 4px;
+    margin-left: 2rem;
+}
+
+.guardar {
+    margin-left: 2rem;
+}

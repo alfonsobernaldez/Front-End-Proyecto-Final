@@ -1,4 +1,34 @@
-<form action="">
-    <input type="text" id="nombre" name="nombre" [(ngModel)]="user.nombre"> {{user.id}} {{user.nombre}}
-    <button (click)="Actualizar(user)">Modificar</button>
-</form>
+<div>
+    <form #formulario="ngForm">
+
+        <label for="Nombre">Nombre</label>
+        <input type="Text" class="form-control" name="nombre" id="nombre" [(ngModel)]="user.nombre" #nombre="ngModel">
+
+
+        <div class="form-group">
+            <label for="Apellido">Apellido</label>
+            <input type="Text" class="form-control" name="apellido" id="apellido" [(ngModel)]="user.apellido">
+        </div>
+
+
+        <div class="form-group">
+            <label for="tlf">Teléfono</label>
+            <input type="Text" class="form-control" id="tlf" name="tlf" [(ngModel)]="user.tlf">
+        </div>
+
+
+        <div class="form-group">
+            <label for="username">Usuario</label>
+            <input type="Text" class="form-control" id="username" name="username" [(ngModel)]="user.username">
+        </div>
+
+        <div class="form-group">
+            <label for="password">Contraseña</label>
+            <input type="password" class="form-control" id="password" name="password" [(ngModel)]="user.password">
+        </div>
+
+        <div class="guardar">
+            <button (click)="Actualizar(user)">Guardar</button>
+        </div>
+    </form>
+</div>

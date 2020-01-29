@@ -23,7 +23,7 @@ listado = null;
 }
 alta() {
 
-  this.router.navigate(['alta']);
+  this.router.navigate(['altauser']);
 
 }
 tablaMascota() {
@@ -31,6 +31,10 @@ tablaMascota() {
   this.router.navigate(['mascota']);
 
   }
+altamascota(){
+
+  this.router.navigate(['altamascota']);
+}
 
 /*verListadoCompleto() {
 

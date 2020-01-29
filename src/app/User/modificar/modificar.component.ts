@@ -10,23 +10,22 @@ import { User } from 'src/app/Modelos/User';
 })
 export class ModificarComponent implements OnInit {
 
-  user:User=new User();
-  constructor(private router:Router,private http: UserService) { }
+user: User = new User;
+  constructor(private router: Router, private http: UserService) { }
 
   ngOnInit() {
     this.Editar();
   }
-  Editar(){
+  Editar() {
 
-  let id=localStorage.getItem("id");
+  let id = localStorage.getItem("id");
   this.http.getUserUnico(+id)
-  .subscribe(datos=>{this.user=datos;})
+  .subscribe(datos => { this.user = datos; })
   }
-  Actualizar(user: User)
-  {
+  Actualizar(user: User) {
+
     this.http.updateUser(user)
-    .subscribe(datos=>{
-      this.user=datos;
+    .subscribe(datos=>{ this.user=datos;
       this.router.navigate(["listado"]);
     })
   }

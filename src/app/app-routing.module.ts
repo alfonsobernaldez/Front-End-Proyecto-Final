@@ -3,6 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { ListadoComponent } from './User/listado/listado.component';
 import { AgregarComponent } from './User/agregar/agregar.component';
 import { ModificarComponent } from './User/modificar/modificar.component';
+import { ListadoMascotaComponent } from './mascota/listado/listadomascota.component';
+import { ModificarMascotaComponent } from './mascota/modificar/modificarmascota.component';
 import { AgregarMascotaComponent } from './mascota/agregar/agregarmascota.component';
 
 
@@ -12,7 +14,7 @@ const routes: Routes = [{
   component: ListadoComponent
 
 },
-{ path: 'alta',
+{ path: 'altauser',
   component: AgregarComponent
 
 },
@@ -21,6 +23,14 @@ const routes: Routes = [{
 
 },
 { path: 'mascota',
+  component: ListadoMascotaComponent
+
+},
+{ path: 'modificarm',
+  component: ModificarMascotaComponent
+
+},
+{ path: 'altamascota',
   component: AgregarMascotaComponent
 
 }

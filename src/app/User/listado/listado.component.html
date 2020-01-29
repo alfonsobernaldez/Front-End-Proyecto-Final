@@ -1,26 +1,32 @@
-<table class="table">
-    <thead class="thead-dark">
+<div>
+    <table class="table">
+        <thead class="thead-dark">
 
-        <tr>
-            <th scope="col">id</th>
-            <th scope="col">Nombre</th>
-            <th scope="col">Apellido</th>
-            <th scope="col">Teléfono</th>
-            <th scope="col">Username</th>
-            <th scope="col">Password</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let us of user">
-            <td scope="row">{{us.id}}</td>
-            <td>{{us.nombre}}</td>
-            <td>{{us.apellido}}</td>
-            <td>{{us.tlf}}</td>
-            <td>{{us.username}}</td>
-            <td>{{us.password}}</td>
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Teléfono</th>
+                <th scope="col">Username</th>
+                <th scope="col">Password</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
 
-            <td><button (click)="Editar(user)">modificar</button></td>
-            <td><button (click)="Eliminar(us)">eliminar</button></td>
-        </tr>
-    </tbody>
-</table>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let us of user">
+                <td scope="row">{{us.id}}</td>
+                <td>{{us.nombre}}</td>
+                <td>{{us.apellido}}</td>
+                <td>{{us.tlf}}</td>
+                <td>{{us.username}}</td>
+                <td>{{us.password}}</td>
+                <td><button (click)="Editar(us)">modificar</button></td>
+                <td><button (click)="Eliminar(us)">eliminar</button></td>
+
+
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -12,7 +12,6 @@ export class ModificarMascotaComponent implements OnInit {
 
   mascota:Mascota = new Mascota;
 
-  user: Mascota=new Mascota();
   constructor(private router:Router,private http: MascotaService) { }
 
   ngOnInit() {
@@ -29,7 +28,7 @@ export class ModificarMascotaComponent implements OnInit {
     this.http.updateMascota(mascota)
     .subscribe(datos=>{
       this.mascota=datos;
-      this.router.navigate(["listado"]);
+      this.router.navigate(["mascota"]);
     })
   }
 

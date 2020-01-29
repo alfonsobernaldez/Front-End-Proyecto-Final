@@ -9,8 +9,8 @@ export class UserService {
   path: string;
   user: User;
 
-  constructor(private http:HttpClient) {
-    this.path= 'http://localhost:8080/users';
+  constructor(private http: HttpClient) {
+    this.path = 'http://localhost:8080/users';
    }
 
    getUsersCompleto()
@@ -19,11 +19,10 @@ export class UserService {
    }
    createUser(user: User)
    {
-     console.log("llegs:" + user.nombre);
      return this.http.post<User>(this.path, user);
    }
-   getUserUnico(id: number)
-   {
+   getUserUnico(id: number) {
+
      return this.http.get<User>(this.path+"/"+id);
    }
    updateUser(user: User)

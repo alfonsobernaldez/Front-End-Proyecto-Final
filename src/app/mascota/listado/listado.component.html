@@ -1,22 +1,26 @@
-<table class="table">
-    <thead class="thead-dark">
+<div>
+    <table class="table">
+        <thead class="thead-dark">
 
-        <tr>
-            <th scope="col">id</th>
-            <th scope="col">Nombre</th>
-            <th scope="col">Especie</th>
-            <th scope="col">Gastos</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let mascota of mascota">
-            <td scope="row">{{mascota.id}}</td>
-            <td>{{mascota.nombre}}</td>
-            <td>{{mascota.especie}}</td>
-            <td>{{mascota.gastos}}</td>
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Especie</th>
+                <th scope="col">Gastos</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let mascota of mascota">
+                <td scope="row">{{mascota.id}}</td>
+                <td>{{mascota.nombre}}</td>
+                <td>{{mascota.especie}}</td>
+                <td>{{mascota.gastos}}</td>
 
-            <td><button (click)="Editar(mascota)">modificar</button></td>
-            <td><button (click)="Eliminar(mascota)">eliminar</button></td>
-        </tr>
-    </tbody>
-</table>
+                <td><button (click)="Editar(mascota)">modificar</button></td>
+                <td><button (click)="Eliminar(mascota)">eliminar</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
