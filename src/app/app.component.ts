@@ -11,7 +11,6 @@ import { User } from './Modelos/User';
 export class AppComponent {
   title = 'Front-End-Proyecto-Final';
 
-  user: User = {id:'',nombre:'',apellido:'',tlf:'' ,username:'',password:'' };
 
 listado = null;
 

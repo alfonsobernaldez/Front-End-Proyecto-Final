@@ -11,17 +11,15 @@ import { UserService } from 'src/app/services/user.service';
 export class AgregarComponent implements OnInit {
 
   user: User;
+
   constructor(private router: Router, private http: UserService) {
     this.user = new User();
    }
 
   ngOnInit() {
   }
-  Guardar(){
+  Guardar() {
 
-    this.http.createUser(this.user)
-    .subscribe(datos=>{
-      this.router.navigate(["listado"]);
-    })
+    this.http.createUser(this.user).subscribe(datos => {this.router.navigate([ "listado"]); })
   }
 }

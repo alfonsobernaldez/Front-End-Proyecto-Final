@@ -6,7 +6,9 @@ import { User } from '../Modelos/User';
   providedIn: 'root'
 })
 export class UserService {
-  path:string;
+  path: string;
+  user: User;
+
   constructor(private http:HttpClient) {
     this.path= 'http://localhost:8080/users';
    }
@@ -15,9 +17,10 @@ export class UserService {
    {
      return this.http.get<User[]>(this.path);
    }
-   createUser(user :User)
+   createUser(user: User)
    {
-     return this.http.post<User>(this.path,user);
+     console.log("llegs:" + user.nombre);
+     return this.http.post<User>(this.path, user);
    }
    getUserUnico(id: number)
    {
@@ -29,7 +32,6 @@ export class UserService {
    }
    deleteUser(user: User)
    {
-    console.log("llega al servicio");
    return this.http.delete<User>(this.path+"/"+user.id);
    }
 }
