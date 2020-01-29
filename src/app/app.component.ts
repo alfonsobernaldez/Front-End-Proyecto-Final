@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from './services/user.service';
-import { User } from './Modelos/User';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +9,7 @@ import { User } from './Modelos/User';
 })
 export class AppComponent {
   title = 'Front-End-Proyecto-Final';
+  logueado = false;
 
 
 listado = null;
