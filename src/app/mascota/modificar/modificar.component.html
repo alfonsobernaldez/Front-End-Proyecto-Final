@@ -1,0 +1,8 @@
+<form action="">
+    <input type="text" id="nombre" name="nombre" [(ngModel)]="mascota.nombre">
+    <div *ngIf="nombre.errors.nombreUnico">
+        Ese nombre de usuario ya está en uso
+    </div>
+    {{mascota.id}} {{mascota.nombre}}
+    <button (click)="Actualizar(mascota)">Modificar</button>
+</form>

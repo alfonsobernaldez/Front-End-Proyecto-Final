@@ -1,0 +1,26 @@
+<table class="table">
+    <thead class="thead-dark">
+
+        <tr>
+            <th scope="col">id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Teléfono</th>
+            <th scope="col">Username</th>
+            <th scope="col">Password</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of user">
+            <td scope="row">{{user.id}}</td>
+            <td>{{user.nombre}}</td>
+            <td>{{user.apellido}}</td>
+            <td>{{user.tlf}}</td>
+            <td>{{user.username}}</td>
+            <td>{{user.password}}</td>
+
+            <td><button (click)="Editar(user)">modificar</button></td>
+            <td><button (click)="Eliminar(user)">eliminar</button></td>
+        </tr>
+    </tbody>
+</table>
