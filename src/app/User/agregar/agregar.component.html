@@ -1,36 +1,36 @@
-<div>
+<div class="container col-md-6" style="margin-top: 2rem;">
 
     <form #formulario="ngForm">
 
         <label for="Nombre">Nombre</label>
-        <input type="Text" class="form-control" name="nombre" id="nombre" [(ngModel)]="user.nombre" #nombre="ngModel">
+        <input type="Text" class="form-control" name="nombre" id="nombre" [(ngModel)]="user.nombre" #nombre="ngModel" style="margin-bottom:1rem; margin-top: 1rem;">
 
 
         <div class="form-group">
             <label for="Apellido">Apellido</label>
-            <input type="Text" class="form-control" name="apellido" id="apellido" [(ngModel)]="user.apellido">
+            <input type="Text" class="form-control" name="apellido" id="apellido" [(ngModel)]="user.apellido" style="margin-bottom:1rem; margin-top: 1rem;">
         </div>
 
 
         <div class="form-group">
             <label for="tlf">Teléfono</label>
-            <input type="Text" class="form-control" id="tlf" name="tlf" [(ngModel)]="user.tlf">
+            <input type="Text" class="form-control" id="tlf" name="tlf" [(ngModel)]="user.tlf" style="margin-bottom:1rem; margin-top: 1rem;">
         </div>
 
 
         <div class="form-group">
             <label for="username">Usuario</label>
-            <input type="Text" class="form-control" id="username" name="username" [(ngModel)]="user.username">
+            <input type="Text" class="form-control" id="username" name="username" [(ngModel)]="user.username" style="margin-bottom:1rem; margin-top: 1rem;">
         </div>
 
         <div class="form-group">
             <label for="password">Contraseña</label>
-            <input type="password" class="form-control" id="password" name="password" [(ngModel)]="user.password">
+            <input type="password" class="form-control" id="password" name="password" [(ngModel)]="user.password" style="margin-bottom:1rem; margin-top: 1rem;">
         </div>
 
 
 
-        <button (click)="Guardar()">Guardar</button>
+        <button (click)="Guardar()" style="margin-top: 2rem;margin-left: 4em">Guardar</button>
 
     </form>
 </div>

@@ -1,26 +1,27 @@
-<div>
+<div class="container col-md-6" style="margin-top: 4rem;">
+
     <form #formulario="ngForm">
 
         <label for="Nombre">Nombre</label>
-        <input type="Text" class="form-control" name="nombre" id="nombre" [(ngModel)]="mascota.nombre" #nombre="ngModel">
+        <input type="Text" class="form-control" name="nombre" id="nombre" [(ngModel)]="mascota.nombre" #nombre="ngModel" style="margin-bottom:1em; margin-top: 1rem;">
 
 
         <div class="form-group">
             <label for="especie">Especie</label>
-            <input type="Text" class="form-control" name="especie" id="especie" [(ngModel)]="mascota.especie">
+            <input type="Text" class="form-control" name="especie" id="especie" [(ngModel)]="mascota.especie" style="margin-bottom:1em; margin-top: 1rem;">
         </div>
 
 
         <div class="form-group">
             <label for="gastos">Gastos</label>
-            <input type="Text" class="form-control" id="gastos" name="gastos" [(ngModel)]="mascota.gastos">
+            <input type="Text" class="form-control" id="gastos" name="gastos" [(ngModel)]="mascota.gastos" style="margin-bottom:1em; margin-top: 1rem;">
         </div>
 
 
 
 
 
-        <button (click)="Guardar()">Guardar</button>
+        <button (click)="Guardar()" style="margin-top: 2rem;margin-left: 4em">Guardar</button>
 
     </form>
 </div>
