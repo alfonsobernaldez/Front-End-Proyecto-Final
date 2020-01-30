@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ListadoComponent } from './User/listado/listado.component';
 import { AgregarComponent } from './User/agregar/agregar.component';
@@ -33,8 +33,7 @@ const routes: Routes = [{
 { path: 'altamascota',
   component: AgregarMascotaComponent
 
-}
-];
+}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
